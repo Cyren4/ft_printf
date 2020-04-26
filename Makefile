@@ -17,7 +17,7 @@ HEADER		=	ft_printf.h
 
 CC			=	gcc
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -I${HEADER}
 
 LIBFT_PATH	=	libft
 

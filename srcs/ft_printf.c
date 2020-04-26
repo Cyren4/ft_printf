@@ -6,7 +6,7 @@
 /*   By: cramdani <cramdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 23:45:38 by cramdani          #+#    #+#             */
-/*   Updated: 2020/04/22 02:25:23 by cramdani         ###   ########.fr       */
+/*   Updated: 2020/04/26 20:04:32 by cramdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	init(t_flags *flags)
 	flags->precision = -1;
 	flags->sign = 0;
 	flags->conversion = '0';
+	flags->c_z = 0;
 }
 
 int		ft_printf(char *format, ...)

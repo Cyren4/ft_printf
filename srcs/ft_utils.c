@@ -6,7 +6,7 @@
 /*   By: cramdani <cramdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 18:46:04 by cramdani          #+#    #+#             */
-/*   Updated: 2020/04/24 01:04:53 by cramdani         ###   ########.fr       */
+/*   Updated: 2020/04/26 21:30:53 by cramdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void    add_back(char *print, int c, int new_len, t_flags flags)
 {
     int len;
 
-    len = ft_strlen(print);
+    len = ft_strlen(print) + flags.c_z;
     print = ft_memmove(print + new_len - len, print, len + 1);
     print -= (new_len - len);
     if (flags.sign == 1 && c == '0')
@@ -26,11 +26,11 @@ void    add_back(char *print, int c, int new_len, t_flags flags)
     *(print + new_len) = '\0';
 }
 
-void    add_front(char *print, int c, int new_len)
+void    add_front(char *print, int c, int new_len, t_flags flags)
 {
     int len;
     
-    len = ft_strlen(print);
+    len = ft_strlen(print) + flags.c_z;
     ft_memset(print + len, c , new_len - len);
     *(print + new_len) = '\0';
 }
@@ -52,8 +52,10 @@ char	*add_zero(char *print, t_flags *flags)
 void    end_disp(char *print, t_flags *flags)
 {
     int len;
-
-    len = ft_strlen(print);
+    if (flags->dash == 1)
+        len = ft_strlen(print + flags->c_z) + flags->c_z;
+    else
+        len = ft_strlen(print) + flags->c_z;
     write(1, print, len);
     flags->len += len;
     free(print);

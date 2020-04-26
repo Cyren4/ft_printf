@@ -6,7 +6,7 @@
 /*   By: cramdani <cramdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 00:46:20 by cramdani          #+#    #+#             */
-/*   Updated: 2020/04/25 20:48:29 by cramdani         ###   ########.fr       */
+/*   Updated: 2020/04/26 20:08:21 by cramdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct		s_flags
 	int		precision;
 	char	conversion;
 	int		sign;
+	int		c_z;
 }					t_flags;
 
 int		ft_printf(char *format, ...
@@ -50,7 +51,7 @@ void		convert_disp_uint(unsigned long int nb, t_flags *flags);
 void		display_p(void *ptr, t_flags *flags);
 void		display_ptr(t_flags *flags, char *print);
 
-void		add_front(char *print, int c, int new_len);
+void		add_front(char *print, int c, int new_len, t_flags flags);
 void	    add_back(char *print, int c, int new_len, t_flags flags);
 void		end_disp(char *print, t_flags *flags);
 

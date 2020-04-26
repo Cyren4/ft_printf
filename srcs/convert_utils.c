@@ -6,7 +6,7 @@
 /*   By: cramdani <cramdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 12:04:33 by cramdani          #+#    #+#             */
-/*   Updated: 2020/04/25 19:15:19 by cramdani         ###   ########.fr       */
+/*   Updated: 2020/04/26 19:45:57 by cramdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 void conversion(va_list args, t_flags *flags)
 {
-	if (flags->conversion == '0')
-		return;
 	if (flags->conversion == '%' || flags->conversion == 'c')
 		flags->conversion == '%' ? display_char('%', flags) : display_char(va_arg(args, int), flags);
 	else if (flags->conversion == 's')

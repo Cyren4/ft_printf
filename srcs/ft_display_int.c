@@ -6,7 +6,7 @@
 /*   By: cramdani <cramdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 17:31:39 by cramdani          #+#    #+#             */
-/*   Updated: 2020/04/25 19:02:47 by cramdani         ###   ########.fr       */
+/*   Updated: 2020/04/26 20:09:21 by cramdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	display_nb(int nb, t_flags *flags)
 	{
 		print = ft_realloc(print, flags->width + 1);
         if (flags->dash == 1)
-			add_front(print, ' ', flags->width);
+			add_front(print, ' ', flags->width, *flags);
 		else if (flags->zero == 1 && flags->precision == -1)
 			add_back(print, '0', flags->width, *flags);
 		else

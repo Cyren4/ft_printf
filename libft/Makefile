@@ -6,7 +6,7 @@
 #    By: cramdani <cramdani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 10:38:04 by cramdani          #+#    #+#              #
-#    Updated: 2020/04/26 12:02:02 by cramdani         ###   ########.fr        #
+#    Updated: 2020/04/26 16:00:05 by cramdani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,13 +52,13 @@ SRCS	=	ft_memset.c \
 		ft_convert_base.c\
 		ft_realloc.c\
 
-BONUS	=	ft_lstadd_back.c\
-			ft_lstclear.c\
-			ft_lstdelone.c\
-			ft_lstiter.c\
-			ft_lstlast.c\
-			ft_lstnew.c\
-			ft_lstsize.c\
+BONUS	=	ft_lstadd_back_bonus.c\
+			ft_lstclear_bonus.c\
+			ft_lstdelone_bonus.c\
+			ft_lstiter_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstnew_bonus.c\
+			ft_lstsize_bonus.c\
 
 OBJS	= ${SRCS:.c=.o}
 
